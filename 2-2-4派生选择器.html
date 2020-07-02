@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span { color: tomato;}
+        /* p span {color:turquoise;} 后代选择器 */
+        /* p > span { color: yellow;} 子元素选择器，只选取第一级子元素*/ 
+        span + span {color: aqua;}
+        div + p {color: blueviolet;}/*相邻兄弟选择器*/
+    </style>
+</head>
+<body>
+    <div>huawei: <span>HCIE</span></div>
+    <p>huawei:
+        <span>HCIP<span>sunzi</span></span>
+        <span>HCIA</span>
+    </p>
+</body>
+</html>
