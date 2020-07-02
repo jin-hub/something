@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器权重</title>
+    <style>
+        div {
+            color: chocolate;
+            color: cornflowerblue !important; /*最大，强制使用*/
+            color: darkmagenta; /*标签选择器权重 1*/
+        }
+        .title {
+            color: darkorange; /*类，伪类，属性选择器权重 10*/
+        }
+        #asd {
+            color: darkred; /*id选择器 100*/
+        }
+        div#asd {
+            color: fuchsia; /*标签+id选择器，权重为1+100*/
+        }
+    </style>
+</head>
+<body>
+    <div class="title" id="asd" style="color: dimgray;">选择器权重2020-7-2</div> <!--内联样式选择器 权重为1000-->
+</body>
+</html>
