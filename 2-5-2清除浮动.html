@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        .box{
+            border: 1px solid #001;
+            width: 500px;
+            /* height: 200px; */
+            overflow: hidden;
+            /* overflow是加在box里 clear是单独加 三种方式清除浮动 1.修改box宽度 2.clear both 3.box里添加overflow*/
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            float: left;
+        }
+        .right{
+            width: 200px;
+            height: 200px;
+            background: gray;
+            float: right;
+        }
+        /* .clear{
+            clear: both;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">i am left</div>
+        <div class="right">i am right</div>
+        <!-- <div class="clear"></div> -->
+    </div>
+
+</body>
+</html>
