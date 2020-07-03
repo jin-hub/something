@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>something about display</title>
+    <style>
+        .box1{
+            background: thistle;
+            display: inline-block;
+        }
+        .box2{
+            background: turquoise;
+            display: block;
+        }
+        .box3{
+            display: inline-block;
+            border: 1px solid red ;
+            /* 只有block element才可以设置height和width */
+            height: 200px;
+            width: 100px;
+            font-size: 14px;
+        }
+        .box4{
+            display: inline-block;
+            /* display: none; */
+            /* when display = none the element will be disappered */
+            border: 1px solid red;
+            width: 100px;
+            height: 200px;
+            font-size: 14px;
+        }
+        span{
+            background:red ;
+        }
+        body{
+            font-size: 0px;
+        }
+        /* 小技巧 如何将两个内联元素中间的间隙去除 方法一：去掉两个元素之间的空格回车 方法二：先将父元素的font-size属性设置为零，再在选择器中将font-size值设置为非0的值 */
+    </style>
+</head>
+<body>
+    <!-- <div class="box1">About Display</div>  -->
+    <!--div is a block element -->
+    <!-- <span class="box2">About Display</span> -->
+    <!-- span is an inline element -->
+    <div class="box3">cloud num 1</div>
+    <div class="box4">cloud num 2</div>
+    <span>span element</span>
+    <span>span element</span>
+</body>
+</html>
