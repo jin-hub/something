@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box { border: 1px solid #000;
+               text-align: center;
+            }
+        .left {
+            /* border: 1px solid black; */
+            float: left;
+            width: 50%;
+        }
+        .right {
+            /* border: 1px solid black; */
+            float: left;
+            width: 50%;
+        }
+        .clearfix:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1>现在有一个父元素中包含2个子元素，要求对这两个子元素实现左右布局，各占父元素空间的一半，父元素高度不能塌陷。</h1>
+<div class="box clearfix">
+    <div class="left">子元素1</div>
+    <div class="right">子元素2</div>
+</div>
+</body>
+</html> 
