@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box { 
+                border: 1px solid #000; 
+                height: 500px;
+                width: 500px;
+            }
+        .parent {
+            background-color: burlywood;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            margin: 0 auto;
+            top: 100px;
+        }
+        .child {
+            background-color: cyan;
+            /* height: 200px; */
+            position: absolute;
+            right: 50%;
+            bottom: 50%;
+
+        }
+    </style>
+</head>
+<body>
+<h1>向文档中添加元素并使用相对定位和绝对定位属性对元素进行布局。</h1>
+
+<div class="box">
+    <div class="parent">我是父亲
+        <div class="child">我是孩子</div>
+    </div>  
+</div>
+</body>
+</html> 
