@@ -1,0 +1,64 @@
+<!-- 向上寻找非static元素 直到body -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+    <style>
+        .phone1 {
+            height: 100px;
+            background-color: blueviolet;
+            position: absolute;
+
+        }
+
+        .phone2 {
+            height: 100px;
+            background-color: cadetblue;
+            position: absolute;
+            z-index: 1;
+
+        }
+
+        .phone3 {
+            height: 100px;
+            background-color: darkgoldenrod;
+            position: absolute;
+
+        }
+
+        .parent {
+            height: 300px;
+            background-color: darksalmon;
+            /* position: absolute; */
+        }
+
+        .child {
+            height: 100px;
+            background-color: dimgray;
+            width: 100px;
+            position: absolute;
+            /* left: 50%; */
+            top: 0px;
+        }
+        
+        .box {
+            border: 1px solid black;
+            padding: 50px;
+            /* padding: 50px; */
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="phone1">mate20</div>
+    <div class="phone2">mate30</div>
+    <div class="phone3">mate40</div> -->
+    <div class="box">
+        <div class="parent">我是父元素
+            <div class="child">我是子元素</div>
+        </div>
+    </div>
+</body>
+</html>
