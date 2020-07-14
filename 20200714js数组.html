@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js数组方法 pop push shift unshift</title>
+</head>
+<body>
+    <p id="catHead"></p>
+    <p id="catHead1"></p>
+    <p id="catHead2"></p>
+    <p id="catHead3"></p>
+    <p id="catHead4"></p>
+
+    <script>
+        var maomitou = ['mao','mi','tou'];
+        document.getElementById("catHead").innerHTML = maomitou + '\n这是最开始的数组';
+        maomitou.pop();
+        // pop会删除最后一个元素，弹出项目；pop()方法返回被弹出的值
+        document.getElementById("catHead1").innerHTML = maomitou + '\n经过pop删除尾元素的数组';
+        maomitou.push('big');
+        // push在数组结尾处加入一个新的元素，推入项目；push方法返回新数组的长度
+        document.getElementById("catHead2").innerHTML = maomitou + '\n经过push在尾部添加元素的数组';
+        maomitou.shift(); 
+        // shift类似弹出popping，会删除首个元素；shift()方法返回被删除的值
+        document.getElementById("catHead3").innerHTML = maomitou + '\n经过shift删除头元素的数组';
+        maomitou.unshift('mao');
+        // unshift在头部添加元素；unshift()方法返回新数组的长度
+        document.getElementById("catHead4").innerHTML = maomitou + '\n经过unshift添加头元素的数组';
+
+// 总结 加入元素可以用push和unshift 一个在尾部添加一个在首部添加
+// 一般来说加入元素的方法返回值是加入后数组的长度
+// 而删除元素的方法返回值就是删除的元素内容
+
+    </script>
+</body>
+</html>
