@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20200714js使用</title>
+</head>
+<body style="text-align: center;">
+    <h1>你知道吗？</h1>
+    <h2 id="todayDate">点击下方按钮显示时间</h1>
+    <button type="button" onclick="myFunction1()">点击我</button>
+        <script>
+        function myFunction1() {
+            var c = new Date(2020,4,20,5,20);
+            // 月份从0开始11结束
+            document.getElementById("todayDate").innerHTML = c;
+        }
+    </script>
+</body>
+</html>
