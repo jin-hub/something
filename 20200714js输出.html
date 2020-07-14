@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20200714js输出</title>
+</head>
+<body style="text-align: center;">
+    <h1>JavaScript 不提供任何内建的打印或显示函数。</h1>
+    <h2>第一种方式，使用window.alert()写入警告框</h2>
+    <script>
+        alert('这是第一种方式，使用window.alert()写入警告框');
+    </script>
+    <h2>第二种方式，使用document.write()写入HTML输出<br>
+        出于测试目的，使用 document.write() 比较方便<br>
+        注意：在 HTML 文档完全加载后使用 document.write() 将删除所有已有的 HTML
+    </h2>
+    <script>
+        document.write('这是第二种方式，使用document.write()写入HTML输出');
+    </script>
+    <h2>第三种方式，使用innerHTML写入HTML元素</h2>
+        <div id = "thirdWay"></div>
+        <script>
+            document.getElementById("thirdWay").innerHTML = '这是第三种方式，使用innerHTML写入HTML元素';
+        </script>
+    <h2>第四种方式，使用console.log()写入浏览器控制台，F12打开控制台</h2>
+        <script>
+            console.log('这是第四种方式，使用innerHTML写入浏览器控制台');
+        </script>
+
+</body>
+</html>
