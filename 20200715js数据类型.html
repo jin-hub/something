@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js数据类型 字符串 数值 布尔值 数组 对象</title>
+</head>
+<body>
+    <script>
+    var length = 7;                             // 数字
+    var lastName = "Gates";                      // 字符串
+    var cars = ["Porsche", "Volvo", "BMW"];         // 数组
+    var x = {firstName:"Bill", lastName:"Gates"};    // 对象    
+
+
+    var b;               // 现在 x 是 undefined
+    var b = 7;           // 现在 x 是数值
+    var b = "Bill";      // 现在 x 是字符串值
+    // 在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返回 undefined。
+    // 空值与 undefined 不是一回事。空的字符串变量既有值也有类型。值是 ""，类型是 "string"
+    var person = null;           // 值是 null，但是类型仍然是对象object
+
+
+    typeof "Bill"              // 返回 "string"
+    typeof 3.14                // 返回 "number"
+    typeof true                // 返回 "boolean"
+    typeof false               // 返回 "boolean"
+    typeof sss                   // 返回 "undefined" (假如 sss 没有值)
+    typeof {name:'Bill', age:62} // 返回 "object"
+    typeof [1,2,3,4]             // 返回 "object" (并非 "array"，参见下面的注释)
+    typeof null                  // 返回 "object"
+    typeof function myFunc(){}   // 返回 "function"
+    // typeof 运算符把数组返回为 "object"，因为在 JavaScript 中数组即对象。
+    </script>
+
+</body>
+</html>
