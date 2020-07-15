@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js字符串+特殊字符</title>
+</head>
+<body>
+
+    <h1>JavaScript 字符串</h1>
+
+    <p>转义序列 \" 在字符串中插入双引号。</p>
+    <p>请不要把字符串创建为对象。它会拖慢执行速度。</p>
+
+    <p id="demo" style="font-size: 22px;"></p>
+
+    <script>
+
+    var x = "中国是瓷器的故乡，因此 china 与\"China（中国）\"同名。";
+    document.getElementById("demo").innerHTML = x; 
+
+    </script>
+    <table style="margin: 0 auto;" border="3">
+        <thead>
+            <tr>
+                <td>代码</td>
+                <td>作用</td>
+            </tr>
+        </thead>
+        <tbody >
+            <tr>
+                <td>/b</td>
+                <td>退格键</td>
+            </tr>
+            <tr>
+                <td>/f</td>
+                <td>换页</td>
+            </tr>
+            <tr>
+                <td>/n</td>
+                <td>新行</td>
+            </tr>
+            <tr>
+                <td>/r</td>
+                <td>回车</td>
+            </tr>
+            <tr>
+                <td>/t</td>
+                <td>水平制表符</td>
+            </tr>
+            <tr>
+                <td>/v</td>
+                <td>垂直制表符</td>
+            </tr>            
+
+        </tbody>
+    </table>
+</body>
+</html>
