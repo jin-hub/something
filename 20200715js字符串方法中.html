@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js字符串方法下：提取字符串，替换转换字符串的方法</title>
+</head>
+<body>
+    <p>slice() 提取字符串的某个部分，并在新字符串中返回被提取的部分。</p>
+    <p id="demo"></p>
+    <p>如果某个参数为负，则从字符串的结尾开始计数。</p>
+    <p id="demo2"></p>
+    <p>substring() 类似于 slice() 不同之处在于 substring() 无法接受负的索引。</p>
+    <p id="demo3"></p>
+    <p>substr() 类似于 slice() 不同之处在于第二个参数规定被提取部分的长度。</p>
+    <p id="demo4"></p>
+    <p>replace() 方法用另一个值替换在字符串中指定的值,不会改变调用它的字符串。它返回的是新字符串。默认地，replace() 只替换首个匹配：</p>
+    <p>tips: replace对大小写敏感，若要执行不敏感的替换请使用正则表达式/i，若要替换所有 使用/g(全局搜索)，如下所示</p>
+    <p> str = "Please visit Microsoft!";
+        var n = str.replace(/MICROSOFT/i, "myHome");</p>
+    <p id="demo5"></p>
+    <p>通过 toUpperCase() 把字符串转换为大写;通过 toLowerCase() 把字符串转换为小写
+    </p>
+    
+    <p id="demo6">Apple, Banana, Mango</p>
+    <button onclick="document.getElementById('demo6').innerHTML = toUpperCase">点我转换成大写</button>
+    <button onclick="document.getElementById('demo6').innerHTML = toLowerCase">点我转换成小写</button>
+
+
+
+    <script>
+    var str = "Apple, Banana, Mango";
+    var str1 = "你好你好123123123";
+
+    var slice = str.slice(7,13);
+    // tips : 含头不含尾
+    document.getElementById("demo").innerHTML = slice; 
+
+    var slice2 = str.slice(-20,-15);
+    document.getElementById("demo2").innerHTML = slice2; 
+
+    var substring = str.substring(0,5);
+    document.getElementById("demo3").innerHTML = substring; 
+
+    var substr = str.substr(0,13);
+    document.getElementById("demo4").innerHTML = substr; 
+
+    var replace = str1.replace("123","456789");
+    document.getElementById("demo5").innerHTML = replace; 
+    
+    var toUpperCase = str.toUpperCase()
+    var toLowerCase = str.toLowerCase()
+
+    
+
+    
+
+    </script>
+     
+</body>
+</html>
