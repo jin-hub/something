@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript字符串方法 帮助处理字符串</title>
+</head>
+<body>
+    <p id="length"></p>
+    <p>The full name of China is the People's Republic of China.</p>
+    <p>china</p>
+    <p id="indexOf"></p>
+    <p id="indexOfNum"></p>
+    <p id="lastIndexOf"></p>
+    <p id="search"></p>
+
+
+    
+    <script>
+    var txt = prompt('请输入一串字符');
+    var sln = txt.length;
+    document.getElementById("length").innerHTML = '您输入的字符串的长度是' + sln + '字节';
+    // length 属性返回字符串的长度
+
+    var str = "The full name of China is the People's Republic of China.";
+    var pos = str.indexOf("China");
+    document.getElementById("indexOf").innerHTML = 'china首次出现在字符串的第' + pos + '位置';
+    // indexOf() 方法返回字符串中指定文本首次出现的索引（位置）    
+    var pos2 = str.indexOf("China",18);
+    document.getElementById("indexOfNum").innerHTML = '使用indexOf+参数方法从第18位开始计数，下一个china首次出现在字符串的第' + pos2 + '位置';
+    // tips:这里的51并不是从规定的计数点开始计数，而是按照默认的计数位置从0开始
+    var pos3 = str.lastIndexOf("China",50);
+    document.getElementById("lastIndexOf").innerHTML = 'lastIndexOf()方法向后搜索，因此位置 50 表示在第 50 位开始搜索，并搜索到开头,位置 50 指的是从开头算起的位置 50。得到的结果是'+pos3;
+    var pos4 = str.search("China");
+    document.getElementById("search").innerHTML = 'search()与indexOf()相等，但方法不相等，search不能加数字设置从第二个位置参数开始，而indexOf不能设置正则表达式';
+
+    </script>
+</body>
+</html>
