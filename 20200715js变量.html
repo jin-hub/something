@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js变量</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        var c = 10+'10';
+        //显示1010
+        document.getElementById("demo").innerHTML = c;
+        var d = 5+5+'10';
+        //显示1010
+        document.getElementById("demo2").innerHTML = d;
+        var e = 5+'10'+5+5;
+        //显示51055
+        document.getElementById("demo3").innerHTML = e;
+
+    </script>
+</body>
+</html>
