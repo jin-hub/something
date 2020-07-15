@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js数值方法</title>
+</head>
+<body>
+    <h1>JavaScript 数字</h1>
+
+    <p>toString() 方法以基数 2 到 36 输出字符串：</p>
+    
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <p>toPrecision() 返回字符串值，它包含了指定长度的数字：</p>
+    <p id="demo4"></p>
+    <p>Number() 可用于把 JavaScript 变量转换为数值：允许空格</p>    
+    <p id="demo5"></p>
+    <p>parseInt() 解析一段字符串并返回数值。允许空格。只返回首个数字：</p>
+    <p id="demo6"></p>
+    <p>parseFloat() 解析一段字符串并返回数值。允许空格。只返回首个数字：</p>
+    <p id="demo7"></p>
+    <p></p>
+
+
+    <script>
+    var myNumber = 32;
+    document.getElementById("demo").innerHTML =
+    "32 = " + "<br>" + 
+    " 10进制 " + myNumber.toString(10) + "<br>" +
+    " 16进制 " + myNumber.toString(16) + "<br>" +
+    " 8进制 " + myNumber.toString(8) + "<br>" +
+    " 2进制 " + myNumber.toString(2) +"<br>"+
+    " 如果toString后不跟参数，则转换为10进制数值 ";
+    var myNumber2 = 32.321;
+    document.getElementById("demo2").innerHTML = myNumber2.toExponential();
+    var myNumber3 = 1112.341231;
+    document.getElementById("demo3").innerHTML = "昨日收益为"+myNumber3.toFixed(2)+"元";
+    var myNumber4 = 1.3456;
+    document.getElementById("demo4").innerHTML = "保留两个数字"+myNumber4.toPrecision(2);
+    document.getElementById("demo5").innerHTML = 
+    Number(true) + "<br>" +
+    Number(false) + "<br>" +
+    Number("10") + "<br>" + 
+    Number("  10") + "<br>" +
+    Number("10  ") + "<br>" +
+    Number(" 10years") + "<br>" +
+    Number("10.33") + "<br>" + 
+    Number("10,33") + "<br>" +
+    Number("10 33") + "<br>" +
+    Number("John");
+
+    document.getElementById("demo6").innerHTML = 
+    parseInt("10") + "<br>" +
+    parseInt("10.33") + "<br>" +
+    parseInt("10 6") + "<br>" +  
+    parseInt("10 years") + "<br>" +  
+    parseInt("years 10");  
+
+    document.getElementById("demo7").innerHTML = 
+    parseFloat("10") + "<br>" +
+    parseFloat("10.33") + "<br>" +
+    parseFloat("10 6") + "<br>" +  
+    parseFloat("10 years") + "<br>" +
+    parseFloat("years 10");  
+    </script>
+</body>
+</html>
