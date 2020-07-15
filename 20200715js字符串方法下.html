@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js字符串方法下：连接字符串，trim，提取字符串字符，属性访问，split</title>
+</head>
+<body style="text-align: center;">
+    <p>首先来尝试连接字符串 concat()方法<br>
+        concat() 方法可用于代替加运算符。下面两行是等效的：<br>
+        var text = "Hello" + " " + "World!";<br>
+        var text = "Hello".concat(" ","World!");<br>
+    </p>
+    <button onclick="document.getElementById('demo').innerHTML = concat">点我合并字符串</button>
+    <p id = "demo"> </p>
+    
+    <p>trim方法用于删除空白符，IE8以下不支持，需要正则表达式</p>
+    <p id = "demo2"></p>
+    
+    <p>提取字符串字符的方法有两种 charAt()和charCodeAt(),charAt返回字符串，charCodeAt()返回的是unicode编码</p>
+    <p id = "demo3"></p>
+    <button onclick="document.getElementById('demo3').innerHTML = str1.charAt(0)">点我返回指定下标的字符串</button>
+    <button onclick="document.getElementById('demo3').innerHTML = str1.charCodeAt(0)">点我返回指定下标的字符串unicode编码</button>
+    
+    <p>属性访问（Property Access）是被允许的，但存在bug</p>
+    <p id = "demo4"></p>
+
+    <p>可以将字符串转换成数组，通过split方法</p>
+    <p>原数组jkl,theshy,rookie</p>
+    <p id = "demo5"></p>
+
+
+
+    <script>
+        var text1 = '我肚子';
+        var text2 = '好饿';
+        concat = text1.concat("真的真的",text2);
+        var str = "           去买东西吃吧         ！";
+        trim = str.trim();
+        document.getElementById('demo2').innerHTML = trim ;
+        var str1 = "你好你好123";
+        str1[0] = "aaa" ;//不产生错误也不工作
+        document.getElementById('demo4').innerHTML = str1[0];
+        var text3 = 'jkl,theshy,rookie';
+        var arr = text3.split("");
+        var text4 = "";
+        var i;
+        for (i = 0;i < arr.length; i++){
+            text4 += arr[i] + "<br>"
+        }
+
+        document.getElementById('demo5').innerHTML = text4;
+
+
+
+
+    </script>
+</body>
+</html>
