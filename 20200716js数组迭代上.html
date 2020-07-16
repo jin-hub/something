@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.forEach()</h2>
+
+<p>为每个元素调用一次函数。</p>
+
+<p id="Array.forEach"></p>
+
+<h2>JavaScript Array.map()</h2>
+
+<p>对每个元素执行一次函数创建新数组</p>
+
+<p id="Array.map"></p>
+
+<h2>JavaScript Array.filter()</h2>
+
+<p>创建一个包含通过测试条件的数组元素的新数组</p>
+
+<p id="Array.filter"></p>
+
+
+
+
+<script>
+    var ary = [4,13,11,200];
+    var text = '';
+    ary.forEach(myFunc);
+    document.getElementById('Array.forEach').innerHTML = text;
+
+    function myFunc(value, index, array){
+        text += value + ',';
+    }
+// Array.forEach
+    var ary_new = ary.map(myFun2);
+    document.getElementById('Array.map').innerHTML = ary_new;
+
+    function myFun2(value, index, array){
+        return value * 2;
+    }
+// Array.map
+    var ary_new2 = ary.filter(myFun3);
+    document.getElementById('Array.filter').innerHTML = ary_new2;
+    function myFun3(value, index, array){
+        return value > 12;
+    }
+// Array.filter
+
+</script>
+
+</body>
+</html>
