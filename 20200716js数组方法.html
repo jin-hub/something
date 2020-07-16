@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 数组的力量隐藏在数组方法中</title>
+</head>
+<body>
+    <p>把数组转换成字符串</p>
+    <p id = "demo"></p>
+
+    <p id = "demo2"></p>
+
+    <p id = "demo3"></p>
+
+    <p id = "demo4"></p>
+
+    <p id = "demo5"></p>
+
+
+    <script>
+        var ionia = ['lee','sin','raze','kass'];
+        var ionia2 = ['idontlikeyou'];
+    </script>
+    <button onclick="document.getElementById('demo').innerHTML = ionia">显示数组</button>
+    
+    <button onclick="document.getElementById('demo2').innerHTML = ionia.toString()">toString转换成字符串</button>
+
+    <button onclick="document.getElementById('demo3').innerHTML = ionia.join('-')">join() 结合为字符串</button>
+
+    <button onclick="delete ionia[1]">点我删除第2个元素(修改为undefined)</button>
+
+    <button onclick="ionia.splice(2,0,'vega','jayce')">splice插入两个元素到数组</button>
+
+    <button onclick="ionia.splice(1,1)">使用splice方法删除第二个元素</button>
+
+    <button onclick="document.getElementById('demo4').innerHTML = ionia.concat(ionia2)">concat合并数组</button>
+
+    <button onclick="document.getElementById('demo5').innerHTML = ionia.slice(3)">我是slice截取的元素</button>
+
+    
+</body>
+</html>
