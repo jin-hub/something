@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js如何对数组进行排序</title>
+</head>
+<body>
+    <p>sort()方法以字母顺序对数组进行排序</p>
+    <p>"red","yellow","blue","gray"</p>
+    <p>33,456,443,4395,4396</p>
+    <button onclick="document.getElementById('demo').innerHTML = color.sort()">sort排序</button>
+    <button onclick="document.getElementById('demo2').innerHTML = color.reverse()">reverse反转数组</button>
+    <button onclick="myFunc()">比值函数对数字进行排序</button>
+    <button onclick="myFunc2()">随机排序</button>
+    <button onclick="document.getElementById('demo5').innerHTML = myArrMax(myNum)">Math.max找出最大值</button>
+    <button onclick="document.getElementById('demo5').innerHTML = myArrMin(myNum)">Math.min找出最小值</button>
+    <button onclick="document.getElementById('demo5').innerHTML = myArrayMax(myNum)">自制方法找出最大值</button>
+
+
+    
+    <p id="demo"><br></p>
+    <p id="demo2"><br></p>
+    <p id="demo3"><br></p>
+    <p id="demo4"><br></p>
+    <p id="demo5"><br></p>
+
+    <p>如何对对象数组的字符串属性进行排序</p>
+    <p id="demo6"><br></p>
+
+
+
+    <script>
+        var color = ["red","yellow","blue","gray"];
+        var myNum = [33,456,443,4395,4396];
+        var nameAge = [{name:"jin", age:22},{name:"hu", age:28},{name:"wang",age:14}];
+        displayNames();
+
+        function myFunc() {
+            myNum.sort(function(a, b){
+                return a - b
+            });
+            document.getElementById('demo3').innerHTML = myNum;
+        }
+
+        function myFunc2() {
+            myNum.sort(function(a, b){
+                return 0.5 - Math.random()
+            });
+            document.getElementById('demo3').innerHTML = myNum;
+        }
+
+        function myArrMax(array) {
+            return Math.max.apply(null,array)
+        };
+
+        function myArrMin(array) {
+            return Math.min.apply(null,array)
+        };
+
+        function myArrayMax(arr) {
+            var len = arr.length;
+            var max = -Infinity;
+            while (len--) {
+                if (arr[len] > max) {
+                    max = arr[len];
+                }
+            }
+            return max;
+            }
+            // 最简便的方法
+        function myArrayMin(arr) {
+            var len = arr.length;
+            var min = Infinity;
+            while (len--) {
+                if (arr[len] < min) {
+                    min = arr[len];
+                }
+            }
+            return min;
+            }
+
+        function myNameFunc() {
+            cars.sort(function(a, b){
+            var x = a.name.toLowerCase();
+            var y = b.name.toLowerCase();
+            if (x < y) {return -1;}
+            if (x > y) {return 1;}
+            return 0;
+        });
+            displayNames();
+            }
+        function displayNames() {
+            document.getElementById("demo6").innerHTML =
+            nameAge[0].name + " " + nameAge[0].age + "<br>" +
+            nameAge[1].name + " " + nameAge[1].age + "<br>" +
+            nameAge[2].name + " " + nameAge[2].age;
+        }
+    </script>
+
+    
+
+
+</body>
+</html>
