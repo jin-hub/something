@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历数组的最佳方法是使用标准的 for 循环：</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <p id = "demo2"></p>
+    <p id = "demo3"></p>
+
+    <script>
+        var hero = ['riven','leesin','masterYi','Ionia'];
+        var i ;
+        var len = hero.length;
+        var text = "<ul>";
+        for(i = 0; i < len; i++){
+            text += "<li>"+hero[i]+"</li>";
+        }
+        text += "</ul>";
+
+        text2 = "<ul>"
+        hero.forEach(myFunc);
+        text2 += "</ul>"
+        function myFunc(value) {
+            text2 += "<li>" + value + "</li>";
+        }
+    </script>
+<button onclick="document.getElementById('demo').innerHTML = hero">点我显示完整数组</button>
+<button onclick="document.getElementById('demo2').innerHTML = text">for循环遍历数组</button>
+<button onclick="document.getElementById('demo3').innerHTML = text2">Array.forEach遍历数组</button>
+
+</body>
+</html>
