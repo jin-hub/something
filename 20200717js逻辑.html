@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 布尔（逻辑）代表两个值之一：true 或 false。</title>
+</head>
+<body style="text-align: center;">
+    
+    <h2>您可以使用 Boolean() 函数来确定表达式（或变量）是否为真</h2>
+    
+    <p id="demo"></p>
+    
+
+    <h2>所有具有“真实”值的即为 True</h2>
+    <h2>所有具有“不真实”值的即为 False,如0, -0, "", undefined, null, false, NaN</h2>
+    <input  id="age">
+
+    <button onclick="myFunc()">条件（三元）测试你是否成年</button>
+    
+    <script>
+        document.getElementById('demo').innerHTML = 1 + 1 == 2;
+        function myFunc(){
+            var age, comeOfAge;
+            age = document.getElementById('age').value;
+            if(isNaN(age)) {
+                comeOfAge = '输入错误，请输入数字';
+                }
+            else {
+                comeOfAge = (age < 18)?'未成年':'成年';
+            }
+
+            // document.getElementById('demo2').innerHTML = comeOfAge;
+            alert(comeOfAge);
+        }
+    </script>
+</body>
+</html>
