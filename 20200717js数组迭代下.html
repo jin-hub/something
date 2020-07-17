@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js数组迭代下</title>
+</head>
+<body>
+    <h2>JavaScript Array.reduce() Array.reduceRight()</h2>
+
+    <p>在每个数组上运行函数，以生成（减少它）单个值。 方向不同 一个从左到右一个从右到左</p>
+
+    <p id="Array.forEach"></p>
+    
+    <h2>JavaScript Array.every() </h2>
+    
+    <p>测试是否所有数组都能通过测试，以下例子为是否都是奇数（n%2!==0）</p>
+    
+    <p id="Array.every"></p>
+
+    <h2>JavaScript Array.some() </h2>
+
+    <p>测试是否有部分数组中的元素能通过测试，以下例子为是否有偶数（n%2==0）</p>
+
+    <p id="Array.some"></p>
+
+    <h2>JavaScript Array.indexOf(item,start) Array.lastIndexOf(item,start)</h2>
+
+    <p>查找元素在数组中的位置，从开头搜索到结尾，Array.lastIndexOf()从结尾开始搜索到开头</p>
+
+    <p id="Array.indexOf"></p>
+
+    <h2>JavaScript Array.find()</h2>
+    
+    <p>返回第一个通过测试函数的数组元素的值</p>
+
+    <p id="Array.find"></p>
+
+    <h2>JavaScript Array.findIndex()</h2>
+
+    <p>返回第一个通过测试函数的数组元素的索引（位置）</p>
+
+    <p id="Array.findIndex"></p>
+
+    <script>
+        var num1 = [439,339,433,443];
+        var sum = num1.reduce(myFunc,1000);
+        document.getElementById('Array.forEach').innerHTML = '初始值为1000，最终总和是' + sum;
+        
+        var result = num1.every(myFunc2);
+        document.getElementById('Array.every').innerHTML = '是否全部是奇数？' + result;
+
+        var result2 = num1.some(myFunc3);
+        document.getElementById('Array.some').innerHTML = '是否有一些数字是偶数？' + result2;
+
+        var position = num1.indexOf(443);
+        document.getElementById('Array.indexOf').innerHTML = '443被找到的位置是' + position;
+
+        var result3 = num1.find(myFunc2);
+        document.getElementById('Array.find').innerHTML = '第一个出现的奇数是' + result3;
+
+        var result4 = num1.findIndex(myFunc2);
+        document.getElementById('Array.findIndex').innerHTML = '第一个出现的奇数在第' + result4 + '位置';
+
+
+
+
+
+        function myFunc(total,value,index,array){
+            return total+value;
+        }
+
+        function myFunc2(value,index,array){
+            return value % 2 !== 0;
+        }
+
+        function myFunc3(value,index,array){
+            return value % 2 == 0;
+        }
+
+
+    </script>
+</body>
+</html>
