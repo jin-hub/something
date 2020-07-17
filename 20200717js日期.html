@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript日期</title>
+</head>
+<body>
+    <h2>new Date()</h2>
+
+    <p>日期对象是静态的。计算机时间正在滴答作响，但日期对象不会。</p>
+
+    <p id="date"></p>
+
+    <h2>new Date(year,month,..)</h2>
+
+    <p>7个数字分别指定年、月(0-11计算)、日、小时、分钟、秒和毫秒（按此顺序）<br>可以从后往前省略，但最少保留两个参数，如果只提供一个参数将被视为毫秒而非小时</p>
+
+    <p id="date2"></p>
+    
+    <h2>new Date(dateString)</h2>
+
+    <p>读取日期字符串创建一个新的日期对象</p>
+
+    <p id="date3"></p>
+
+    <h2>new Date(mileseconds)</h2>
+
+    <p>零时间是 1970 年 1 月 1 日 00:00:00 UTC,创建一个零时加毫秒的新日期对象</p>
+
+    <p id="date4"></p>
+
+    <h2>toUTCString() 方法</h2>
+
+    <p>将日期转换为 UTC 字符串（一种日期显示标准）</p>
+
+    <p id="date5"></p>
+
+    <h2>toDateString() 方法</h2>
+
+    <p>将日期转换为 date 字符串（一种更易读的日期显示格式）</p>
+
+    <p id="date6"></p>
+
+
+    <script>
+        var date = new Date();
+        document.getElementById('date').innerHTML = date;
+
+        var date2 = new Date(2019,11,25,10,30,30,0);
+        document.getElementById('date2').innerHTML = date2;
+
+        var date3 = new Date('October 13,2020 15:27:00');
+        document.getElementById('date3').innerHTML = date3;
+
+        var date4 = new Date(86400000);
+        document.getElementById('date4').innerHTML = date4;
+
+        document.getElementById('date5').innerHTML = date4.toUTCString();
+        document.getElementById('date6').innerHTML = date4.toDateString();
+
+
+    </script>
+</body>
+</html>
