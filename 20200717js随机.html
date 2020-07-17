@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js随机</title>
+</head>
+<body>
+    <h2>JavaScript Math.random()</h2>
+    <p>Math.random() 返回 0（包含）和 1（不包括）之间的随机数：</p>
+    <p id="demo"></p>
+    <h2>JavaScript 随机整数</h2>
+    <p>Math.random() 与 Math.floor() 一起使用用于返回随机整数</p>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById('demo').innerHTML = Math.random();
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+}
+        function getRndInteger1(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+    </script>
+    <button onclick="document.getElementById('demo1').innerHTML = Math.floor(Math.random() * 10)">生成0-9之间的随机整数</button>
+    <button onclick="document.getElementById('demo1').innerHTML = Math.floor(Math.random() * 11)">生成0-10之间的随机整数</button>
+    <button onclick="document.getElementById('demo1').innerHTML = Math.floor(Math.random() * 100)">生成0-99之间的随机整数</button>
+    <button onclick="document.getElementById('demo1').innerHTML = Math.floor(Math.random() * 101)">生成0-100之间的随机整数</button>
+    <button onclick="document.getElementById('demo1').innerHTML = Math.floor(Math.random() * 101)">生成0-100之间的随机整数</button>
+    <button onclick="document.getElementById('demo1').innerHTML = getRndInteger(12,14)">生成12(包括)-14(不包括)之间的随机整数</button>
+    <button onclick="document.getElementById('demo1').innerHTML = getRndInteger1(12,14)">生成12(包括)-14(包括)之间的随机整数</button>
+</body>
+</html>
