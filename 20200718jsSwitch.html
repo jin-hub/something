@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch语句</title>
+</head>
+<body>
+    <h2>switch 语句用于基于不同条件执行不同动作</h2>
+    <h2>Switch case 使用严格比较（===）值必须与要匹配的类型相同。</h2>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+
+
+
+
+    <script>
+        var day;
+        switch(new Date().getDay()){
+            case 0:
+            day = 'sunday';
+            break;
+            case 1:
+            day = 'monday';
+            break;
+            case 2:
+            day = 'tuesday';
+            break;
+            case 3:
+            day = 'wednesday';
+            break;
+            case 4:
+            day = 'thursday';
+            break;
+            case 5:
+            day = 'friday';
+            break;
+            case 6:
+            day = 'saturday';
+            break;
+        }
+
+        var hours;
+        switch(new Date().getHours()){
+            default:
+            hours = '现在不是凌晨也不是中午';
+            break;
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 23:
+            hours = '现在是凌晨';
+            break;
+            case 11:
+            case 12:
+            case 13:
+
+            hours = '现在是中午';
+            break;
+
+        }
+        document.getElementById('demo').innerHTML = '今天是' + day;
+        document.getElementById('demo2').innerHTML = hours;
+
+    </script>
+</body>
+</html>
