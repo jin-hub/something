@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //编写函数，实现反转任意数组
+        function reverse(arr) {
+            var newarr = [];
+            for (var i = 0; i < arr.length / 2; i++) {
+                var temp = arr[i];
+                newarr[i] = arr[arr.length - i - 1];
+                // newarr[0] = newarr[2]
+                // newarr[1] = newarr[1]
+                newarr[arr.length - i - 1] = temp;
+            }
+            return newarr;
+        }
+        console.log(reverse(['red', 'blue', 'pink']));
+        //编写函数，实现对数字数组的排序（正序）
+        function sort(arr) {
+            for (var i = 0; i < arr.length - 1; i++) {
+                for (var j = 0; j < arr.length - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(sort([1, 4, 2, 9]));
+    </script>
+</head>
+
+</html>
