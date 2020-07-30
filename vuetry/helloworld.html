@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        {{ idont }}
+    </div>
+    <!-- Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统 -->
+
+    <div id="app2">
+        <span v-bind:title="message2"> 
+            鼠标悬停在此处可以查看动态绑定的提示信息！
+        </span>
+    </div>
+    <!-- v-bind attribute 被称为指令,将这个元素节点的 title attribute 和 Vue 实例的 message property 保持一致 -->
+
+    <div id="app3">
+        <p v-if="seen">你能看到我</p>
+    </div>
+    <!-- 这个例子演示了我们不仅可以把数据绑定到 DOM 文本或 attribute，还可以绑定到 DOM 结构 -->
+
+    <div id="app4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+
+    <div id="app5">
+        <p>{{ message3 }}</p>
+        <button v-on:click="reverseMsg">点我反转</button>
+    </div>
+
+    <div id="app6">
+        <p>{{ msg4 }}</p>
+        <input v-model="msg4">
+    </div>
+
+
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                idont: 'Hello sb!',
+                idont: 'smsm'
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                message2: '页面加载于' + new Date().toLocaleString()
+            }
+        })
+
+        var app3 = new Vue({
+            el: '#app3',
+            data: {
+                seen: true
+            }
+        })
+
+        var app4 = new Vue({
+            el: '#app4',
+            data: {
+                todos: [{
+                    text: '今天是2020年'
+                }, {
+                    text: '7月30日'
+                }, {
+                    text: 'v-for 指令可以绑定数组的数据来渲染一个项目列表'
+                }]
+            }
+        })
+
+        var app5 = new Vue({
+            el: '#app5',
+            data: {
+                message3: '你好你好123'
+            },
+            methods: {
+                reverseMsg: function() {
+                    this.message3 = this.message3.split('').reverse().join('')
+                }
+            }
+        })
+
+        var app6 = new Vue({
+            el: '#app6',
+            data: {
+                msg4: '你好你好456'
+            }
+        })
+    </script>
+</body>
+
+</html>
