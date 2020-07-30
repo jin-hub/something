@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>{{msgg}}</div>
+        <div>{{msggg}}</div>
+        <div>{{msgnew}}</div>
+    </div>
+
+
+
+    <script>
+        var arr = 'new arr';
+        var app = new Vue({
+            el: '#app',
+            data: {
+                msgg: "我是msgg初始值",
+                msggg: "我是msggg初始值"
+
+            },
+
+            watch: {
+                msgg: function(newval, oldval) {
+                    alert('原值为' + oldval + ',新值为' + newval)
+                }
+            },
+
+            computed: {
+                msgnew: function() {
+                        return 'computed方法会显示出 ' + this.msgg + ' 以及 ' + this.msggg + arr
+                    }
+                    // 本实例内变量发生变换，才会重新计算computed
+            }
+        })
+    </script>
+</body>
+
+</html>
