@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{asdasd}}
+        <a v-bind:href="asdasd1">百度(v-bind)</a>
+        <a href="https://www.sougou.com">真正的搜狗</a>
+        <a :href="qq">google(:href) </a>
+        <div>{{num}}</div>
+        <div>{{(num+2)*10}}</div>
+        <button v-on:click="math()">点我num+1(v-on)</button>
+        <button @click="math()">点我num+1(@)</button>
+
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                asdasd1: 'https://www.baidu.com',
+                asdasd: 'nihaonihao 123',
+                qq: 'http://www.google.com',
+                num: 1,
+
+            },
+            methods: {
+                math: function() {
+                    this.num++
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
