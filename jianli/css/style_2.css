@@ -1,0 +1,40 @@
+.inline {
+    display: inline;
+}
+.resume {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    color: white;
+    margin-top: 50px;
+}
+span,
+a {
+    margin-right: 20px;
+    font-size: 16px;
+}
+h3 {
+    font-size: 16px;
+}
+.leftside {
+    width: 10%;
+    height: 100%;
+    background-color: rgb(146, 146, 231);
+    float: left;
+    margin-right: 20px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 20px 0 20px 0;
+}
+html,
+body {
+    height: 100%;
+}
+.main{
+    padding-top: 10px;
+}
+
