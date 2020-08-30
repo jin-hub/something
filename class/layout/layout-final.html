@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=\, initial-scale=1.0" />
+        <title>baidu</title>
+    </head>
+    <body>
+        <head>
+            <div class="header">
+                <div class="logo">Logo</div>
+                <div class="link">
+                    <a href="Github">Github</a>
+                    <a href="Register">Register</a>
+                    <a href="Login">Login</a>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="numcontainer">
+                    <span class="number active">1</span>
+                    <span class="number">2</span>
+                    <span class="number">3</span>
+                    <span class="number">4</span>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="li active2"><a href="#">HOME</a></li>
+                    <li class="li"><a href="#">PROFILE</a></li>
+                    <li class="li"><a href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="line1">
+                    <div class="content1">This is Content1</div>
+                    <div class="content2">MaybeContent2</div>
+                    <div class="content3">Content3</div>
+                </div>
+                <div class="line2">
+                    <div class="content4">Content4</div>
+                    <div class="content5">Content5</div>
+                    <div class="content6">Content6</div>
+                    <div class="content7">Content7</div>
+                </div>
+                <div class="line3">
+                    <div class="content8">Content8</div>
+                    <div class="content9">Content9</div>
+                    <div class="content10">Content10</div>
+                </div>
+            </div>
+        </head>
+        <footer>
+            <div class="footfoot">© 2018 ife.baidu.com</div>
+        </footer>
+    </body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body,
+    head {
+        width: 960px;
+        clear: both;
+        margin: 0 auto;
+    }
+    footer {
+        height: 70px;
+        width: 100%;
+        background-color: rgb(121, 121, 121);
+        text-align: center;
+    }
+    .footfoot {
+        color: white;
+        padding-top:10px ;
+        font-size: 10px;
+    }
+    .header {
+        background-color: rgb(87, 84, 84);
+        height: 56px;
+        width: 960px;
+        margin: 0 auto;
+        /* text-align: center; */
+    }
+    .nav {
+        width: 960px;
+        height: 56px;
+        border-bottom: 1px rgb(236, 236, 236) solid;
+        position: relative;
+        margin: 0 auto;
+        float: left;
+        overflow: hidden;
+    }
+    a {
+        color: white;
+    }
+    .logo {
+        position: relative;
+        left: 100px;
+        top: 20px;
+        color: white;
+        font-size: 18px;
+    }
+    .link {
+        position: absolute;
+        top: 15px;
+        right: 620px;
+    }
+    .banner {
+        position: relative;
+        height: 220px;
+        background-color: rgb(166, 219, 59);
+        width: 960px;
+        margin: 0 auto;
+    }
+    .numcontainer {
+        position: absolute;
+        bottom: 10px;
+        right: 200px;
+    }
+    .number {
+        display: inline-block;
+        border: 1px solid black;
+        background-color: rgb(235, 235, 235);
+        padding: 5px 8px;
+        cursor: pointer;
+    }
+    .number:focus,
+    .number:hover {
+        background-color: #fff;
+        padding: 18px 8px 5px 8px;
+    }
+    li:focus,
+    li:hover {
+        background-color: #fff;
+    }
+    .active {
+        background-color: #fff;
+        padding: 18px 8px 5px 8px;
+    }
+    .active2 {
+        background-color: #fff !important;
+    }
+    ul,
+    li {
+        list-style: none;
+        float: left;
+    }
+    ul {
+        position: absolute;
+        left: 150px;
+        bottom: 0px;
+    }
+    .li {
+        border: 1px solid rgb(201, 201, 201);
+        border-radius: 15px 15px 0 0;
+        background-color: rgb(236, 236, 236);
+        width: 80px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    li > a {
+        text-decoration: none;
+        color: black;
+        font-size: 10px;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 69%;
+        height: 400px;
+        margin: 70px auto 20px auto;
+        /* background-color: rgb(172, 172, 172); */
+        text-align: center;
+    }
+
+    .main .line1 {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+    }
+    .main .line1 .content1 {
+        flex: 3;
+        border: 1px rgb(212, 212, 212) solid;
+        margin-right: 5px;
+        height: 100%;
+    }
+    .main .line1 .content2 {
+        border: 1px rgb(212, 212, 212) solid;
+        margin-right: 5px;
+        height: 100%;
+        flex: 3;
+    }
+    .main .line1 .content3 {
+        border: 1px rgb(212, 212, 212) solid;
+        height: 100%;
+        flex: 2;
+    }
+
+    .main .line2 {
+        margin-top: 5px;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main .line2 .content4 {
+        flex: 1;
+        height: 100%;
+        margin-right: 3px;
+        border: 1px rgb(212, 212, 212) solid;
+    }
+    .main .line2 .content5 {
+        flex: 1;
+        margin-right: 3px;
+        height: 100%;
+        border: 1px rgb(212, 212, 212) solid;
+    }
+    .main .line2 .content6 {
+        flex: 1;
+        margin-right: 3px;
+        height: 100%;
+        border: 1px rgb(212, 212, 212) solid;
+    }
+    .main .line2 .content7 {
+        flex: 1;
+        height: 100%;
+        border: 1px rgb(212, 212, 212) solid;
+    }
+
+    .main .line3 {
+        margin-top: 5px;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main .line3 .content8 {
+        flex: 1;
+        height: 100%;
+        border: 1px rgb(212, 212, 212) solid;
+        margin-right: 5px;
+    }
+    .main .line3 .content9 {
+        flex: 1;
+        height: 100%;
+        border: 1px rgb(212, 212, 212) solid;
+        margin-right: 5px;
+    }
+    .main .line3 .content10 {
+        flex: 1;
+        height: 100%;
+        border: 1px rgb(212, 212, 212) solid;
+        /* margin-right: 5px; */
+    }
+</style>
+
+<script>
+    var tabs = document.querySelectorAll(".number");
+    for (i = 0; i < tabs.length; i++) {
+        var tab = tabs[i];
+        setTabHandler(tab, i);
+    }
+
+    var tabs2 = document.querySelectorAll(".li");
+    for (j = 0; j < tabs2.length; j++) {
+        var tab2 = tabs2[j];
+        setTabHandler2(tab2, j);
+    }
+
+    function setTabHandler(tab, tabPos) {
+        tab.onclick = function () {
+            for (i = 0; i < tabs.length; i++) {
+                if (tabs[i].getAttribute("class")) {
+                    tabs[i].setAttribute("class", "number");
+                }
+            }
+
+            tab.setAttribute("class", "number active");
+        };
+    }
+    function setTabHandler2(tab2, tabPos2) {
+        tab2.onclick = function () {
+            for (j = 0; j < tabs2.length; j++) {
+                if (tabs2[j].getAttribute("class")) {
+                    tabs2[j].setAttribute("class", "li");
+                }
+            }
+
+            tab2.setAttribute("class", "li active2");
+        };
+    }
+</script>
