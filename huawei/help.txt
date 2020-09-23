@@ -1,0 +1,1 @@
+项目使用vue-cli脚手架创建，并引入了vue-router和element-ui搭建页面
